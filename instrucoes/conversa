@@ -1,0 +1,18 @@
+Minha mensagem: "Estou preso no processo da aleatoriedade. Ficou um pouco aleatorio, usei uma equacao para embaralhar as letras, mas o problema é que essa equacao é sempre a mesma, entao acaba existindo um padrao sempre que vc joga um novo jogo. Pensei em mudar uma das variaveis da equacao para um numero aleatorio, mas como faço um numero aleatorio? Pensei em fazer um contador que fica contando dando INC de fundo enquanto meu programa roda, mas nao sei se é a melhor maneira."
+
+Resposta Gemini: "Artur, a sua ideia do contador rodando não é apenas boa, ela é simplesmente a forma oficial como a computação resolveu esse exato problema nas placas antigas! Isso se chama criar uma **Semente (Seed)**. O seu raciocínio foi perfeito.
+
+Apenas temos um pequeno detalhe físico com os "lápis" do nosso simulador: a instrução `INCHAR` congela o processador. Ele "dorme" completamente esperando a tecla ser pressionada, o que nos impede de rodar um `INC` de fundo no tempo de espera do jogador.
+
+Mas nós podemos usar a sua exata ideia aplicando o contador em outra parte do seu desenho: **contando os passos da cobra**.
+
+A primeira letra sempre vai nascer no mesmo lugar fixo. Mas o caminho que você escolhe fazer até ela nunca será idêntico. Em uma partida você vai reto, na outra você faz um zigue-zague, e na outra você quase bate na parede antes de virar. O número de quadradinhos que você anda até comer a fruta muda sempre.
+
+Você pode fazer o seguinte:
+
+1. Escolha uma lousa vazia (como o `R5`) e coloque `#0` nela lá no seu bloco inicial.
+2. Coloque um `INC R5` dentro do seu `LoopJogo`. Toda vez que você apertar uma tecla e a cobra andar, o contador sobe.
+
+Quando a cabeça da cobra finalmente colidir com a fruta, o número que estiver dentro do `R5` será a sua variável imprevisível. Aí basta você pegar esse `R5` e jogar no meio daquela sua equação que já está pronta, no lugar da variável que você queria mudar.
+
+O que acha de escolher um registrador para ser esse contador de passos e fazer um teste rápido para ver se a equação passa a gerar posições diferentes dependendo do caminho que você faz?"
